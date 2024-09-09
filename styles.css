@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white: #fff;
+    --dark1: #34344e;
+    --dark2: #3a415a;
+    --dark3: #566981;
+    --dark4: #89a7b1;
+    --dark5: #ebfcf6;
+    --dark6: #2f2f46;
+    --cyan1: #70e3ea;
+
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav{
+    width: 100%;
+    background-color: #181818;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.nav-list a{
+    text-decoration:  none;
+    color: white;
+    padding: 20px;
+}
+
+.nav-list a:hover{
+    color: rgb(28, 228, 28);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: calc(100vh - 80px);
+    background-image: url("images/programador.png");
+    padding-left: 10%;
+}
+
+.main h1{
+    color: #fff;
+    font-size: 54px;
+}
+
+.main a{
+    text-decoration: none;
+    color: #181818;
+}
+
+.main p {
+    font: 24px;
+    font-size: 24px;
+    font-style:  italic;
+    color: rgb(28, 228, 28);
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.call-to-action{
+    cursor: pointer;
+    background-color: #FFF;
+    border: 0;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    transition:  0.9s;
+    animation: 0.8s infinite alternate;
+}
+
+.call-to-action:hover{
+    transform: scale(1.1);
+    animation: translateY 0.9s infinite alternate;
+
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFF;
+    width: 100%;
+    padding: 50px 10%;
+}
+
+.about div{
+    max-width: 50%;
+    padding: 20px;
+}
+
+.about img{
+    display: flex;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about div h2{
+    font-size: 32px;
+}
+
+.about > div > div{
+    
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.projects h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.project-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects img{
+    width: 40%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-top:  0.5%;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: 0.9s;
+}
+
+.projects img:hover{
+    opacity: 1;
+}
+
+.action{
+    background-color: #181818;
+    border: 0;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 34px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.1);
+    animation: translateY 0.9s infinite alternate; 
+}
+
+footer{
+    background-color:#181818;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+}
+
+#contacts{
+    padding: 30px;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    flex-direction: center;
+    margin: auto;
+}
+
+/* .action:hover{
+        transform: scale(1.1);
+        animation: translateY 0.9s infinite alternate; 
+} */
+
+
+.about p{
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 1050px){
+    .main h1{
+        font-size: 45px;
+    }
+
+    .main p{
+        font-size: 18px;
+    }
+
+    .main{
+        background-size: cover;
+    }
+
+    .about{
+        flex-direction: column;
+        padding: 10px 0 0 5px;
+    }
+
+
+
+    .about div{
+        max-width: 80%;
+    }
+
+    .about prelista lista{
+        padding: 0;
+    }
+
+    .nav{
+        justify-content: center;
+    }
+
+    .about img{
+        margin-top: 0;
+        width: 40%;
+        padding: 0 0 0 0;
+    }
+
+
+    .projects img{
+
+        flex-direction: column;
+    }
+}
+
+
+.prelsita p{
+    text-align: justify;
+}
